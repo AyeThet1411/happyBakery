@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Bakery Shop</title>
+    <!-- Boostrap Css-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
+      integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="resources/css/style.css" />
+    <link rel="stylesheet" href="resources/css/mediaquery.css">
+    
+  </head>
+  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="0">
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container p-0">
+        <div class="collapse navbar-collapse justify-content-center">
+          <ul class="navbar-nav nav-pills">
+            <li class="nav-item">
+              <a href="#home" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="menu.html" class="nav-link">Menu</a>
+            </li>
+          </ul>
+        </div>
+        <a class="navbar-brand" href="#"
+          ><img src="resources/img/logo.png" alt="" class="logo"
+        /></a>
+        <div class="collapse navbar-collapse justify-content-center">
+          <ul class="navbar-nav nav-pills">
+            <li class="nav-item">
+              <a href="#promotion-plan" class="nav-link">Promotion</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact-us" class="nav-link">Contact Us</a>
+            </li>
+          </ul>
+          <div>
+            <i
+              class="fas fa-cart-plus cart-icon"
+              data-bs-toggle="modal"
+              data-bs-target="#modal"
+            ></i>
+            <span class="badge"></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- modal box -->
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="exampleModalLabel">Shopping Cart</h2>
+                <button type="button"  class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="first-text">You don't have any items</p>
+            </div>
+            <div class="modal-footer">
+                <div class="container">
+                     <div class="row total-price-box">
+                            <div class="col-md-10">
+                                <h3>Total</h3>
+                            </div>
+                            <div class="col-md-2">
+                                <span>$</span>
+                                <span class="total-price"> 0</span>
+                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button class="btn btn-danger clear">Clear All</button>
+                            <button class="btn general-btn send-order-btn">Send Your Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="small-screen-nav fixed-top">
+      <ul>
+        <li>
+          <img src="resources/img/logo.png" style="width: 50px;" alt="">
+        </li>
+        <li>
+          <a href="/menu.html">Menu</a>
+        </li>
+      </ul>
+      <i class="fas fa-cart-plus cart-icon" data-bs-toggle="modal"data-bs-target="#modal"></i> 
+      <span class="badge small-nav-badge"></span>
+    </div>  
+    <section id="home">
+      <div class="home-bg">
+        <img src="resources/img/home-background.jpg" alt="" />
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="home-heading">
+            <h1>Happy Bakery</h1>
+
+            <p>
+              Together with our happy bakery family <br />
+              we enjoy bringing you <br />
+              our favorite
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="content-box-md">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5">
+              <h2>About Our <span>Happy Bakery</span></h2>
+            </div>
+            <div class="col-md-7">
+              <div class="about-text">
+                <p>
+                  <i class="fas fa-quote-left"></i>...Our Happy Bakery began in
+                  2021 located next to Mingalar Mandalay along 62nd road Lorem
+                  ipsum dolor sit amet consectetur adipisicing elit. Corporis
+                  aspernatur, ipsa voluptatum praesentium inventore molestias
+                  officia, fuga repellendus...<i class="fas fa-quote-right"></i>
+                </p>
+                <div class="btn about-btn">See More</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="special-orders">
+      <div class="content-box-sm">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Top Special Orders</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="top-order-box">
+                <div class="top-order-img">
+                  <img
+                    src="resources/img/breads/chllah.png"
+                    alt="chllah"
+                    class="img-responsive"
+                  />
+                </div>
+                <div class="order-item-name">
+                  <p>Chllah&nbsp; Bread &nbsp;&nbsp;</p>
+                  <span>$</span>
+                  <span>5</span>
+                </div>
+                <div class="order-btn">
+                  <button class="btn general-btn btn-special">
+                    Order Now<i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="top-order-box">
+                <div class="top-order-img">
+                  <img
+                    src="resources/img/cookies/blue-ribbon-sugar-cookies.png"
+                    alt="blue-ribbon-sugar-cookies"
+                    class="img-responsive"
+                  />
+                </div>
+                <div class="order-item-name">
+                  <p>Blue Ribbongar </p>
+                  <span>$</span>
+                  <span>10</span>
+                </div>
+                <div class="order-btn">
+                  <button class="btn general-btn btn-special">
+                    Order Now<i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="top-order-box">
+                <div class="top-order-img">
+                  <img
+                    src="resources/img/cupcakes/carrotcupcake.png"
+                    alt="carrotcupcake"
+                    class="img-responsive"
+                  />
+                </div>
+                <div class="order-item-name">
+                  <p>Carrot Cupcake</p>
+                  <span>$</span>
+                  <span>4</span>
+                </div>
+                <div class="order-btn">
+                  <button class="btn general-btn btn-special">
+                    Order Now<i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="top-order-box">
+                <div class="top-order-img">
+                  <img
+                    src="resources/img/donuts/icedringdougnut.png"
+                    alt="icedringdougnut"
+                    class="img-responsive"
+                  />
+                </div>
+                <div class="order-item-name">
+                  <p>Iced Ring Donut</p>
+                  <span>$</span>
+                  <span>6</span>
+                </div>
+                <div class="order-btn">
+                  <button class="btn general-btn btn-special">
+                    Order Now<i class="fas fa-cart-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="promotion-plan">
+      <div class="content-box-sm">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Promotion Plans</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 plan">
+              <div class="promotion-box">
+                <div class="promotion-content">
+                  <h3 class="plan-1">Plan I</h3>
+                  <div class="row">
+                    <div class="col-md-5 pt-2 media-img">
+                      <img
+                        src="resources/img/breads/rye-bread-wheat-bread.png"
+                        alt=""
+                        class="promo-item-1"
+                      />
+                      <p>Rye Bread</p>
+                    </div>
+                    <div class="col-md-2 media-img-icon"><i class="fas fa-plus"></i></div>
+                    <div class="col-md-5 media-img">
+                      <img
+                        src="resources/img/coffee/Black-coffee.png"
+                        alt=""
+                        class="promo-item-1"
+                      />
+                      <p>Black Coffee</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><strong>Buy Two Items & Get Disount</strong></p>
+                    </div>
+                    <div class="col-md-6">
+                      <del>$20</del>
+                      <p>$ <span>10</span></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 buy-now">
+                      <button
+                        class="btn general-btn btn-promo plan-1"
+                        id="btn-promo-1"
+                      >
+                        Buy Now
+                      </button>
+                    </div>
+                    <div class="col-md-6 circle">
+                      <div class="discount-circle">
+                        <p>
+                          <span><strong>50%</strong></span
+                          >Off
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 plan">
+              <div class="promotion-box">
+                <div class="promotion-content">
+                  <h3 class="plan-2">Plan II</h3>
+                  <div class="row">
+                    <div class="col-md-5 media-img">
+                      <img
+                        src="resources/img/cookies/figRoll.png"
+                        alt=""
+                        class="promo-item-2"
+                      />
+                      <p>Benne Wafer</p>
+                    </div>
+                    <div class="col-md-2 media-img-icon"><i class="fas fa-plus"></i></div>
+                    <div class="col-md-5 pt-2 media-img">
+                      <img
+                        src="resources/img/cupcakes/carrotcupcake.png"
+                        alt=""
+                        class="promo-item-2"
+                      />
+                      <p>Carrot Cupcake</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><strong>Buy Two Items & Get Disount</strong></p>
+                    </div>
+                    <div class="col-md-6">
+                      <del>$50</del>
+                      <p>$ <span>30</span></p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 buy-now">
+                      <button
+                        class="btn general-btn btn-promo plan-2"
+                        id="btn-promo-2"
+                      >
+                        Buy Now
+                      </button>
+                    </div>
+                    <div class="col-md-6 circle">
+                      <div class="discount-circle">
+                        <p>
+                          <span><strong>30%</strong></span
+                          >Off
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 plan">
+              <div class="promotion-box">
+                <div class="promotion-content">
+                  <h3 class="plan-3">Plan III</h3>
+                  <div class="row">
+                    <div class="col-md-5 media-img">
+                      <img
+                        src="resources/img/donuts/sweetsprinkle.png"
+                        alt=""
+                        class="promo-item-3"
+                      />
+                      <p>Sweet Sprinkle</p>
+                    </div>
+                    <div class="col-md-2 media-img-icon"><i class="fas fa-plus"></i></div>
+                    <div class="col-md-5 media-img">
+                      <img
+                        src="resources/img/coffee/Macchiato.png"
+                        alt=""
+                        class="promo-item-3"
+                      />
+                      <p>Macchiato</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><strong>Buy Two Items & Get Disount</strong></p>
+                    </div>
+                    <div class="col-md-6">
+                      <del>$40</del>
+                      <p>$ <span>25</span></p>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 buy-now">
+                      <button
+                        class="btn general-btn btn-promo plan-3"
+                        id="btn-promo-3"
+                      >
+                        Buy Now
+                      </button>
+                    </div>
+                    <div class="col-md-6 circle">
+                      <div class="discount-circle">
+                        <p>
+                          <span><strong>40%</strong></span
+                          >Off
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="app-store">
+      <div class="content-box-sm">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="left-img">
+                <img
+                  src="resources/img/app-store-section-img.png"
+                  class="img-responsive"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="right-text-box">
+                <p>We are the best quality bakery shop</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consequatur dignissimos consectetur tenetur hic minus fuga
+                  quam, temporibus dolorem provident nobis excepturi ullam,
+                  optio placeat, est veritatis nemo quidem distinctio quibusdam.
+                </p>
+                <p>You can order easily by using App</p>
+                <img src="resources/img/app-store.png" alt="" />
+                <img src="resources/img/download-app-android.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="chief-members">
+      <div class="content-box-sm">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Chief Members</h1>
+            </div>
+          </div> 
+          <div class="card my-5 text-center customer-card mx-auto">
+            <img src="resources/img/chief/member1.png"  id="customer-img" class="img-card mx-auto" alt="">
+            <h4 id="customer-name" class="text-uppercase">JOHN MERRy</h4>
+            <div class="review-icons my-2">
+                <span class="star-icon">
+                <i class="fas fa-star"></i>
+                </span>
+                <span class="star-icon">
+                <i class="fas fa-star"></i>
+                </span>
+                <span class="star-icon">
+                <i class="fas fa-star"></i>
+                </span>
+                <span class="star-icon">
+                <i class="fas fa-star"></i>
+                </span>
+                <span class="star-icon">
+                <i class="fas fa-star-half"></i>
+                </span>
+            </div>
+            <p id="customer-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sit voluptatum illo? Quae fugiat aspernatur harum aperiam, quis eos officia.</p>
+            <span class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+            </span>
+            <a href="" class="btn prevBtn chief-btn" type="button"><i class="fas fa-chevron-left"></i></a>
+            <a href="" class="btn nextBtn chief-btn" type="button"><i class="fas fa-chevron-right"></i></a>
+          </div>   
+        </div>  
+      </div>
+    </section>
+    <section id="contact-us">
+      <div class="content-box-sm">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Contact Us</h1>
+              <p>Have a question or comments?</p>
+            </div>
+          </div>
+          <form action="">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Name"
+                    id="name"
+                  />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="input-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email"
+                    id="email"
+                  />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="input-group">
+                  <select
+                    name=""
+                    id=""
+                    class="form-select"
+                    aria-label="Location"
+                  >
+                    <option value="Location" selected>Location</option>
+                    <option value="Myanmar">Myanmar</option>
+                    <option value="Korea">Korea</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Thailand">Thailand</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="input-group mt-5 contact-textarea">
+                  <textarea
+                    cols="30"
+                    rows="10"
+                    class="form-control"
+                    placeholder="Message"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-12 mt-5 w-25 contact-btn">
+                <button type="submit" class="form-control submit-btn">
+                  Send
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 mb-5 mt-5">
+            <h1>Happy Bakery</h1>
+          </div>
+        </div>
+        <div class="row footer-row">
+          <div class="col-md-4">
+            <div class="footer-box">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>
+                Happy Bakery Shop <br />
+                Loacation: <a href="#">Mandalay</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="footer-box">
+              <i class="fas fa-phone"></i>
+              <p>
+                Phone: <br />
+                <a href="#">+123 456 789</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="footer-box">
+              <i class="far fa-envelope"></i>
+              <p>
+                Email <br />
+                <a href="mailto:ayethetsukhaing1999@gmail.com"
+                  >happybakery@gmil.com</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 p-0">
+            <div class="copyright-box mt-5 mb-0">
+              <p class="pt-2">copyright@2021 All right deserved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      //white nav bar
+      document.addEventListener("scroll", function () {
+        let y = window.scrollY;
+        if (y > 150) {
+          document.querySelector(".navbar").classList.add("white-nav-top");
+        } else {
+          document.querySelector(".navbar").classList.remove("white-nav-top");
+        }
+      });
+    </script>
+    <!-- Boostrap JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js"
+      integrity="sha512-OvBgP9A2JBgiRad/mM36mkzXSXaJE9BEIENnVEmeZdITvwT09xnxLtT4twkCa8m/loMbPHsvPl0T8lRGVBwjlQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./resources/js/main.js"></script>
+  </body>
+</html>

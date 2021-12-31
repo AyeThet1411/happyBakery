@@ -1,0 +1,237 @@
+@media only screen and (max-width: 320px) {
+  .navbar {
+    display: none;
+  }
+  .small-screen-nav {
+    display: block;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .small-screen-nav ul {
+    display: inline;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  .small-screen-nav li {
+    display: inline;
+    padding: 0 10px;
+  }
+  .small-screen-nav a {
+    margin-left: 40px;
+  }
+  .small-screen-nav i {
+    padding: 10px 5px 0 0;
+    float: right;
+  }
+  .badge {
+    display: block;
+    top: 10%;
+    right: 8%;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 27px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .content-box-md {
+    padding: 30px 0;
+  }
+  .content-box-sm {
+    padding: 20px 0;
+  }
+  .home-bg img {
+    height: 400px;
+  }
+  .home-heading {
+    top: 60%;
+  }
+  .home-heading h1 {
+    font-size: 38px;
+  }
+  .home-heading p {
+    font-size: 14px;
+  }
+  .about-text {
+    border-left: none;
+  }
+  .about-text p {
+    font-size: 14px;
+  }
+  .about-btn {
+    margin-left: 30%;
+    padding: 10px 20px;
+  }
+  .top-order-box {
+    display: flex;
+  }
+  .top-order-img {
+    width: 100px;
+  }
+  .top-order-img img {
+    height: 80px;
+    display: inline-block;
+  }
+  .order-item-name p {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .order-item-name span {
+    font-size: 14px;
+  }
+  #special-orders .order-btn button {
+    display: inline-block;
+    font-size: 14px;
+  }
+  .promotion-box:before {
+    display: none;
+  }
+  .plan {
+    margin-bottom: 10px;
+  }
+  .media-img {
+    width: 45%;
+  }
+  .media-img-icon {
+    width: 10%;
+  }
+  .promotion-content button {
+    top: 80%;
+  }
+  .discount-circle {
+    height: 70px;
+    width: 150px;
+  }
+  .circle {
+    position: absolute;
+    left: 40%;
+  }
+  .discount-circle p {
+    font-size: 28px;
+    color: #ffffff;
+    padding-top: 20px;
+  }
+  .right-text-box img {
+    width: 140px;
+    height: 35px;
+  }
+  #chief-members h1 {
+    margin-bottom: 0;
+  }
+  #chief-members .customer-card {
+    width: 300px;
+  }
+  #chief-members .img-card {
+    width: 100px;
+  }
+  .prevBtn,
+  .nextBtn {
+    font-size: 1.5rem;
+    top: 97%;
+    transition: all 0.5s ease-in-out;
+  }
+  .prevBtn {
+    left: 40%;
+    transform: none;
+  }
+  .nextBtn {
+    right: 40%;
+    transform: none;
+  }
+  .input-group {
+    margin-bottom: 10px;
+  }
+  .contact-textarea,
+  .contact-btn {
+    margin-top: 0 !important;
+  }
+  textarea {
+    height: 7rem;
+  }
+  .submit-btn {
+    width: 100px;
+  }
+  .footer-box {
+    margin-bottom: 10px;
+    padding-bottom: 30px !important;
+  }
+  .footer-box i {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    padding: 10px 10px 10px;
+    top: 5%;
+    left: 43%;
+  }
+  .item-container [class="row"] {
+    display: flex;
+  }
+  .modal-body {
+    padding-left: 0;
+  }
+  .modal-body [class="col-md-6"] {
+    width: 50%;
+    padding: 0;
+  }
+  .modal-body [class="col-md-6"] .first-img,
+  .modal-body [class="col-md-6"] .second-img {
+    width: 40%;
+    padding: 0;
+  }
+  .plan-plus {
+    font-size: 15px;
+  }
+  .modal-body [class="col-md-5"] {
+    width: 40%;
+    padding: 0;
+  }
+  .modal-body .remove-icon {
+    text-align: center;
+    width: 10%;
+    padding: 0;
+  }
+  /* ------------menu------------ */
+  .nav {
+    display: none;
+    background-color: rgb(238, 234, 234);
+    position: absolute;
+    opacity: 0.9;
+    top: 100%;
+  }
+
+  .card {
+    width: 20rem;
+    margin-bottom: 5px;
+  }
+
+  .card:hover {
+    box-shadow: none;
+    transform-origin: center;
+    transform: translate(0px, 0px);
+  }
+  .side-border {
+    border-right: none;
+    min-width: 100%;
+    border-bottom: 1px solid rgb(104, 98, 98);
+  }
+
+  li:last-child {
+    transform: translateX(40%);
+  }
+
+  #small-screen-icons {
+    display: block;
+    width: 50px;
+  }
+
+  .showandhide {
+    display: block;
+    /* z-index: -1; */
+  }
+  .tab-content [class*="col"] {
+    margin-left: 10%;
+  }
+}
