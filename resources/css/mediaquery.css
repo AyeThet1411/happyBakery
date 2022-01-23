@@ -193,6 +193,15 @@
     width: 10%;
     padding: 0;
   }
+.total-price-box h3{
+    display: inline-block;
+  }
+  .total-price-box [class="col-md-10"]{
+    width: 80%;
+  }
+  .total-price-box [class="col-md-2"]{
+    width: 20%;
+  }
   /* ------------menu------------ */
   .nav {
     display: none;
