@@ -9,7 +9,9 @@ const modalBody = document.querySelector(".modal-body");
 const promoButtons = document.querySelectorAll(".btn-promo");
 const specialButtons = document.querySelectorAll(".btn-special");
 const badge = document.querySelector(".badge");
-const smallNavBadge=document.querySelector('.small-nav-badge')
+const smallNavBadge = document.querySelector(".small-nav-badge");
+const displayPrice = document.querySelector(".total-price");
+const firstText = document.getElementById("first-text");
 
 icon.addEventListener("click", function (e) {
   modal.classList.add("show");
@@ -42,6 +44,8 @@ function createEachItem(img, name, price) {
                               </div>`;
 
   modalBody.appendChild(cartItem);
+  firstText.style.display = "none";
+  checkItem();
   return item;
 }
 const item = [];
@@ -100,6 +104,7 @@ promoButtons.forEach(function (btn) {
                               </div>`;
 
     modalBody.appendChild(cartItem);
+    firstText.style.display = "none";
     showTotalPrice();
     displayrModalFooter();
   });
@@ -123,13 +128,17 @@ specialButtons.forEach(function (btn) {
       showTotalPrice();
       addLocalStorage(item);
     }
-    displayrModalFooter();
+    displayrModalFooter()
+    
   });
 });
+
 function displayrModalFooter() {
   modalFooter.style.display = "block";
-  const firstText = document.getElementById("first-text");
-  firstText.style.display = "none";
+}
+function removeModalFooter(){
+  modalFooter.style.display = "none";
+  firstText.style.display = "block";
 }
 function showTotalPrice() {
   const total = [];
@@ -142,11 +151,16 @@ function showTotalPrice() {
     return total;
   }, 0);
 
-  document.querySelector(".total-price").textContent = `${totalPrice}`;
+  displayPrice.textContent = `${totalPrice}`;
   badge.style.display = "block";
   badge.textContent = `${total.length}`;
-  smallNavBadge.textContent=`${total.length}`;
+  if(smallNavBadge){
+    smallNavBadge.textContent = `${total.length}`;
+  }
+  
   badgeRemove();
+
+  return totalPrice;
 }
 function badgeRemove() {
   const close = document.querySelector(".btn-close");
@@ -164,12 +178,25 @@ function removeItemTrash(e) {
     const itemContainer =
       e.target.parentElement.parentElement.parentElement.parentElement;
     modalBody.removeChild(itemContainer);
+    
+    showTotalPrice();
+    
     //delete from local
     const itemName =
       e.target.parentElement.parentElement.previousElementSibling.children[0]
         .firstElementChild.textContent;
-    deleteSingleItem(itemName);
+
+    let itemRows = JSON.parse(localStorage.getItem("itemRow"));
+    let index = itemRows.indexOf(itemName);
+  
+    console.log(itemRows.splice([index], 1));
+    //first delete existing list
+    localStorage.removeItem("itemRow");
+    //add new updated/edited list
+    localStorage.setItem("itemRow", JSON.stringify(itemRows));
+   
   }
+  checkItem();
 }
 function addLocalStorage(item) {
   let itemRow = localStorage.getItem("itemRow")
@@ -178,33 +205,42 @@ function addLocalStorage(item) {
   itemRow.push(item);
   localStorage.setItem("itemRow", JSON.stringify(itemRow));
 }
+let exists = localStorage.getItem("itemRow");
 
-function displayStorage() {
-  let exists = localStorage.getItem("itemRow");
+function displayStorage() { 
+  let sum = 0;
   if (exists) {
     let storageItems = JSON.parse(localStorage.getItem("itemRow"));
     storageItems.forEach(function (storageItem) {
       let image = storageItem.img;
       let name = storageItem.name;
       let price = storageItem.price;
+      sum += Number(price);
       createEachItem(image, name, price);
     });
+    displayPrice.textContent = sum;
   }
-  displayrModalFooter();
+  checkItem();
 }
-function deleteSingleItem(itemName) {
-  let itemRows = JSON.parse(localStorage.getItem("itemRow"));
-  let index = itemRows.indexOf(itemName);
 
-  console.log(itemRows.splice([index], 1));
-  //first delete existing list
-  localStorage.removeItem("itemRow");
-  //add new updated/edited list
-  localStorage.setItem("itemRow", JSON.stringify(itemRows));
+function checkItem(){
+
+  if(modalBody.childElementCount > 1 || localStorage.getItem('itemRow') === [] ){
+    
+    displayrModalFooter()
+  }
+  else{
+    removeModalFooter()
+  }
 }
 
 function removeLocal() {
   localStorage.removeItem("itemRow");
+  const itemRows = document.querySelectorAll(".item-container");
+  itemRows.forEach(function (row) {
+    modalBody.removeChild(row);
+  });
+  removeModalFooter();
 }
 
 document.addEventListener("DOMContentLoaded", displayStorage);
@@ -310,10 +346,12 @@ orderButtons.forEach(function (btn) {
     const itemName = namePirce.slice(0, -2);
 
     const price = namePirce.slice(-1);
-    console.log(price);
+    
     let item = createEachItem(imgPath, itemName, price);
+    addLocalStorage(item);
     showTotalPrice();
     displayrModalFooter();
-    addLocalStorage(item);
+    
+    
   });
 });
